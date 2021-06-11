@@ -13,12 +13,15 @@
 # limitations under the License.
 
 # [START workflows_args]
-main:
-  params: [args]
-  steps:
-  - step1:
-      assign:
-        - outputVar: ${"Hello " + args.firstName + " " + args.lastName}
-  - step2:
-      return: ${outputVar}
+- step1:
+    assign:
+        - varA: "Hello"
+        - varB: "World"
+- logStep:
+    call: sys.log
+    args:
+        text: TEXT
+        severity: SEVERITY
+- step2:
+    return: ${varA + " " + varB}
 # [END workflows_args]

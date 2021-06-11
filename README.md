@@ -4,7 +4,7 @@ This repository contains examples for [Workflows documentation](https://cloud.go
 
 ## Overview
 
-All workflow examples are in the `src/` directory with the file format `*.workflows.{yaml/json}`.
+All workflow examples are in the `src/` directory with the file format `*.{yaml/json}`.
 
 The JSON and YAML files have equivalent behaviour and functionality. Using JSON vs YAML is a matter of personal preference.
 

@@ -1,0 +1,10 @@
+[
+  {
+    "STEP_NAME": {
+      "call": "sys.sleep",
+      "args": {
+        "seconds": "SLEEP_IN_SECONDS"
+      }
+    }
+  }
+]

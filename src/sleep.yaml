@@ -1,0 +1,19 @@
+waitForJobCompletion:
+    params: [jobId]
+    steps:
+      - checkJob:
+          call: http.get
+          args:
+              url: ${"https://example.com/jobs/" + jobId}
+              auth:
+                  type: OAuth2
+          result: jobStatus
+      - checkIfDone:
+          switch:
+            - condition: ${jobStatus.complete}
+              return: jobStatus
+      - wait:
+          call: sys.sleep
+          args:
+              seconds: 60
+          next: checkJob

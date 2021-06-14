@@ -1,0 +1,12 @@
+[
+  {
+    "MyStep": {
+      "switch": [
+        {
+          "condition": "${not(\"Age\" in myMap)}",
+          "next": "AgeMissing"
+        }
+      ]
+    }
+  }
+]

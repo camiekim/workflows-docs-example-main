@@ -1,0 +1,15 @@
+  - FOR_LOOP_STEP_NAME_A:
+      for:
+          value: LOOP_VARIABLE_NAME_A
+          in: ${LIST_EXPRESSION_A}    # or simply in: LIST_DEFINITION
+          steps:
+              - STEP_NAME_A:
+                  next: continue
+  - FOR_LOOP_STEP_NAME_B:
+      for:
+          value: LOOP_VARIABLE_NAME_B
+          range: [${BEGIN_EXPRESSION}, ${END_EXPRESSION}]
+          steps:
+              - STEP_NAME_B:
+                  next: break
+  

@@ -1,0 +1,11 @@
+[
+  {
+    "STEP_NAME": {
+      "assign": [
+        {
+          "VARIABLE_NAME": "VALUE"
+        }
+      ]
+    }
+  }
+]

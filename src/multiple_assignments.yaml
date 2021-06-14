@@ -1,0 +1,7 @@
+  - assign_vars:
+      assign:
+          - number: 5
+          - number_plus_one: ${number+1}
+          - other_number: 10
+          - string: "hello"
+  

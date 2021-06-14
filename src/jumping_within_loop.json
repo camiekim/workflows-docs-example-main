@@ -1,0 +1,25 @@
+[
+  {
+    "FOR_LOOP_STEP_NAME": {
+      "for": {
+        "value": "LOOP_VARIABLE_NAME",
+        "in": "${LIST_EXPRESSION_A}",
+        "steps": [
+          {
+            "STEP_NAME_A": {
+              "next": "STEP_NAME_C"
+            }
+          },
+          {
+            "STEP_NAME_B": {
+              "next": "STEP_NAME_C"
+            }
+          },
+          {
+            "STEP_NAME_C": null
+          }
+        ]
+      }
+    }
+  }
+]

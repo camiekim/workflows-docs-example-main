@@ -1,0 +1,4 @@
+  - STEP_NAME:
+      call: 
+      args:
+      result: VARIABLE

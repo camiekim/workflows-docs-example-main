@@ -1,0 +1,11 @@
+   main:
+       - STEP_NAME:
+           call: SUBWORKFLOW_NAME
+           args:
+               ARG_1: VALUE_1
+               ARG_2: VALUE_2
+           result: OUTPUT_VARIABLE
+   SUBWORKFLOW_NAME:
+        params: PARAMETER_1,PARAMETER_2
+        steps:
+            - step_1:

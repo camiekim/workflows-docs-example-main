@@ -1,0 +1,12 @@
+[
+  {
+    "MyStep": {
+      "switch": [
+        {
+          "condition": "${\"Age\" in myMap}",
+          "next": "AgeExists"
+        }
+      ]
+    }
+  }
+]

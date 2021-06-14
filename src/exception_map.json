@@ -1,0 +1,10 @@
+[
+  {
+    "step_a": {
+      "raise": {
+        "code": 55,
+        "message": "Something went wrong."
+      }
+    }
+  }
+]

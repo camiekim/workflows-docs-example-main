@@ -1,0 +1,18 @@
+[
+  {
+    "FOR_LOOP_STEP_NAME": {
+      "for": {
+        "value": "LOOP_VARIABLE_NAME",
+        "range": [
+          "${BEGIN_EXPRESSION}",
+          "${END_EXPRESSION}"
+        ],
+        "steps": [
+          {
+            "STEP_NAME_A": null
+          }
+        ]
+      }
+    }
+  }
+]

@@ -1,0 +1,7 @@
+[
+  {
+    "STEP_NAME": {
+      "return": "${VARIABLE}"
+    }
+  }
+]

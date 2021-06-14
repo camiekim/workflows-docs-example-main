@@ -1,0 +1,3 @@
+  - lastStep:
+      return: ${myMap.Address.Country}
+  

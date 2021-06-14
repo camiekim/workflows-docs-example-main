@@ -1,0 +1,17 @@
+[
+  {
+    "STEP_NAME_A": {
+      "switch": [
+        {
+          "condition": "${EXPRESSION_A}",
+          "next": "STEP_NAME_B"
+        },
+        {
+          "condition": "${EXPRESSION_B}",
+          "next": "STEP_NAME_C"
+        }
+      ],
+      "next": "STEP_NAME_D"
+    }
+  }
+]

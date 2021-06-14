@@ -1,0 +1,6 @@
+  main:
+      params: [MAP_NAME]
+      steps:
+        - step1:
+            return: ${MAP_NAME.PARAM_NAME}
+  

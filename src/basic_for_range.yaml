@@ -1,0 +1,13 @@
+- assignStep:
+    assign:
+        - sum: 0
+- loopStep:
+    for:
+        value: v                    # required, v = 1, 2, …, 9
+        range: [1, 9]               # inclusive beginning and ending values
+        steps:
+          - sumStep:
+              assign:
+                - sum: ${sum + v}   # v = 1, 2, … 9
+- returnStep:
+    return: ${sum}                  # sum is 45

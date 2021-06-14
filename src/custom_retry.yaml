@@ -1,0 +1,15 @@
+main:
+    - step_name:
+        try:
+            steps:
+        retry:
+            predicate: ${retry_predicate}
+            max_retries: number_of_retries
+            backoff:
+                initial_delay: delay_seconds
+                max_delay: max_delay_seconds
+                multiplier: delay_multiplier
+
+retry_predicate:
+    params: [e]
+    steps:

@@ -1,0 +1,13 @@
+[
+  {
+    "non_idempotent_step": {
+      "try": {
+        "call": "http.get",
+        "args": {
+          "url": "https://host.com/api"
+        }
+      },
+      "retry": "${http.default_retry_non_idempotent}"
+    }
+  }
+]

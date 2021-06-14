@@ -1,0 +1,3 @@
+- step_a:
+    assign:
+        - num_list: ["zero","one","two"]

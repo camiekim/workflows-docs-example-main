@@ -1,0 +1,36 @@
+[
+  {
+    "read_item": {
+      "try": {
+        "steps": [
+          {
+            "step_a": {
+              "call": "http.get",
+              "args": {
+                "url": "https://host.com/api"
+              },
+              "result": "api_response1"
+            }
+          },
+          {
+            "step_b": {
+              "call": "http.get",
+              "args": {
+                "url": "https://host.com/api2"
+              },
+              "result": "api_response2"
+            }
+          }
+        ]
+      },
+      "except": {
+        "as": "e",
+        "steps": [
+          {
+            "KnownErrors": null
+          }
+        ]
+      }
+    }
+  }
+]

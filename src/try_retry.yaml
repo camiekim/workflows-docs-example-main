@@ -1,0 +1,11 @@
+  - step_name:
+      try:
+          steps:
+              ...
+      retry: ${http.default_retry}
+          predicate: ${http.default_retry_predicate}
+          max_retries: number_of_retries
+          backoff:
+              initial_delay: delay_seconds
+              max_delay: max_delay_seconds
+              multiplier: delay_multiplier

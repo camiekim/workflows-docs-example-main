@@ -1,0 +1,10 @@
+  - step_name:
+      try:
+          steps:
+      retry:
+          predicate: ${http.default_retry_predicate_non_idempotent}
+          max_retries: 10
+          backoff:
+              initial_delay: 1
+              max_delay: 90
+              multiplier: 3

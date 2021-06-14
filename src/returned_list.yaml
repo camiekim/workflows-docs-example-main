@@ -1,0 +1,7 @@
+- step_a:
+    call: http.get
+    args:
+        url: https://somewhere.com/getMonths
+    result: monthsList
+- step_b:
+    return: ${monthsList.body[2]}

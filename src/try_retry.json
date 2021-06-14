@@ -1,0 +1,10 @@
+[
+  {
+    "step_name": {
+      "try": {
+        "steps": "..."
+      },
+      "retry": "${http.default_retry}\npredicate: ${http.default_retry_predicate}\nmax_retries: number_of_retries\nbackoff:\n    initial_delay: delay_seconds\n    max_delay: max_delay_seconds\n    multiplier: delay_multiplier"
+    }
+  }
+]

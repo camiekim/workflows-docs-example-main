@@ -1,0 +1,48 @@
+[
+  {
+    "step_name": {
+      "try": {
+        "steps": [
+          {
+            "step_a": {
+              "call": "http.get",
+              "args": {
+                "url": "https://httpstat.us/404"
+              }
+            }
+          }
+        ]
+      },
+      "retry": "${http.default_retry_non_idempotent}",
+      "except": {
+        "as": "e",
+        "steps": [
+          {
+            "checkForTimeout": {
+              "switch": [
+                {
+                  "condition": "${e.code == 404}",
+                  "return": "notfound_404"
+                },
+                {
+                  "condition": "${e.code == 408}",
+                  "return": "timeout_408"
+                }
+              ]
+            }
+          },
+          {
+            "raiseError": {
+              "raise": "${e}"
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "returnSuccess": {
+      "return": "Success"
+    }
+  }
+]

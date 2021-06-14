@@ -1,0 +1,10 @@
+  - createMap:
+      assign:
+        - myMap:
+            FirstName: "John"
+            LastName: "Smith"
+            Age: 26
+            Address:
+                Street: "Flower Road 12"
+                City: "Superville"
+                Country: "Atlantis"

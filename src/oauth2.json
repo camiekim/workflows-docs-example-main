@@ -1,0 +1,14 @@
+[
+  {
+    "step_A": {
+      "call": "http.post",
+      "args": {
+        "url": "https://compute.googleapis.com/compute/v1/projects/myproject1234/zones/us-central1-b/instances/myvm001/stop",
+        "auth": {
+          "type": "OAuth2",
+          "scope": null
+        }
+      }
+    }
+  }
+]

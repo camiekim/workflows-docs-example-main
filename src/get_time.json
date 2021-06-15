@@ -1,0 +1,25 @@
+[
+  {
+    "get_time": {
+      "call": "http.get",
+      "args": {
+        "url": "https://us-central1-workflowsample.cloudfunctions.net/datetime"
+      },
+      "result": "currentTime"
+    }
+  },
+  {
+    "return_daylight_savings_bool": {
+      "return": "${daylightSavings}"
+    }
+  },
+  {
+    "get_daylight_savings_bool": {
+      "assign": [
+        {
+          "daylightSavings": "${currentTime.body.isDayLightSavingsTime}"
+        }
+      ]
+    }
+  }
+]

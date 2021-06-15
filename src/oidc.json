@@ -1,0 +1,19 @@
+[
+  {
+    "step_A": {
+      "call": "http.get",
+      "args": {
+        "url": "https://us-central1-project.cloudfunctions.net/functionA",
+        "query": {
+          "firstNumber": 4,
+          "secondNumber": 6,
+          "operation": "sum"
+        },
+        "auth": {
+          "type": "OIDC",
+          "audience": null
+        }
+      }
+    }
+  }
+]

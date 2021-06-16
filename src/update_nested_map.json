@@ -1,0 +1,19 @@
+[
+  {
+    "update_nested_map": {
+      "assign": [
+        {
+          "my_map": {}
+        },
+        {
+          "my_map.NestedMapKey": {
+            "Key1": "Value1"
+          }
+        },
+        {
+          "my_map.NestedMapKey.Key2": "Value2"
+        }
+      ]
+    }
+  }
+]

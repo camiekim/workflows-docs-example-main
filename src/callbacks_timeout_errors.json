@@ -1,0 +1,60 @@
+{
+  "main": {
+    "steps": [
+      {
+        "create_callback": {
+          "call": "events.create_callback_endpoint",
+          "args": {
+            "http_callback_method": "GET"
+          },
+          "result": "callback_details"
+        }
+      },
+      {
+        "print_callback_details": {
+          "call": "sys.log",
+          "args": {
+            "severity": "INFO",
+            "text": "${\"Listening for callbacks on \" + callback_details.url}"
+          }
+        }
+      },
+      {
+        "await_callback": {
+          "try": {
+            "call": "events.await_callback",
+            "args": {
+              "callback": "${callback_details}",
+              "timeout": 3600
+            },
+            "result": "callback_request"
+          },
+          "except": {
+            "as": "e",
+            "steps": [
+              {
+                "log_error": {
+                  "call": "sys.log",
+                  "args": {
+                    "severity": "ERROR",
+                    "text": "${\"Received error \" + e.message}"
+                  },
+                  "next": "end"
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "print_callback_result": {
+          "call": "sys.log",
+          "args": {
+            "severity": "INFO",
+            "text": "${\"Received \" + json.encode_to_string(callback_request.http_request)}"
+          }
+        }
+      }
+    ]
+  }
+}

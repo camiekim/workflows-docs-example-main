@@ -1,0 +1,18 @@
+- create_callback:
+    call: events.create_callback_endpoint
+    args:
+        http_callback_method: "GET"
+    result: callback_details
+- print_callback_details:
+    call: sys.log
+    args:
+        severity: "INFO"
+        text: ${"Listening for callbacks on " + callback_details.url}
+- await_callback:
+    call: events.await_callback
+    args:
+        callback: ${callback_details}
+        timeout: 3600
+    result: callback_request
+- print_callback_result:
+    return: ${callback_request.http_request}
